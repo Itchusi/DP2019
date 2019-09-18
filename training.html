@@ -81,22 +81,115 @@
      <del>삭제내용</del>
 
      <u>밑줄</u>
-     <strike>가운데줄</strike>
+     <stroke>가운데줄</stroke>
      <!-- sup 윗첨자, sub 아랫첨자 -->
      2<sup>2</sup> : 2의 2제곱
      H<sub>2</sub>0 : 물의 화학식
 
      <img src="./images/catcat.jpg"/>
      
-     <!-- table, tr, td-->
-     <table>
-         <!-- tr 한줄, td 한칸-->
-         <tr>
-             <td>1</td>
-             <td>2</td>
-             <td>3</td>
-             <td>4</td>
-         </tr>
-     </table>
-    </body>
+     <style>
+        table, tr, td {border:solid 1px black;}
+     </style>
+
+<style>
+    table, tr, td {border:solid 1px black}
+</style>
+<!-- summary 요약, cation 표제-->
+
+<table summary="표 설명">
+<caption>[표1] 표 제목</caption>
+<!-- thead, tbody, tfoot -->
+    <thead>
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+            <th>제목4</th>
+            <th>제목5</th>
+        </tr>
+    </thead>
+<!-- table, tr 한줄,td 한칸 -->
+<tbody>
+    <tr>
+        <!-- colspan 가로 (열)늘이기, rowspan 세로(행)늘이기 -->
+         <td colspan="2">1 </td>
+         <td rowspan="2">2 </td>
+         <td>3</td>
+         <td>4</td>
+    </tr>
+    <tr>
+         <td>5</td>
+         <td>6</td>
+         <td>7</td>
+         <td>8</td>
+    </tr>
+</tbody>
+
+<style>
+    table{
+        border: 1px solid black;
+    }
+    td{
+        border: 1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <td colspan="3">up</td>
+        <td rowspan="2">right</td>
+    </tr>
+    <tr>
+        <td rowspan="2">left</td>
+        <td colspan="2">center</td>
+    </tr>
+    <tr>
+        <td colspan="3">down</td>
+    </tr>
+</table>
+
+</table>
+
+     <!-- div, span 분할 -->
+     <!-- 의미없이 쓰기 좋은 태그들 -->
+     <div>내용</div>
+     <!-- 인라인형 -->
+     <span>내용</span>
+<form>
+        <!-- text, radio, checkbox -->
+        <input type="text" placeholder="아이디를 입력해주세요" value=""/>
+        <input type="password" placeholder="암호를 입력해주세요" value=""/>
+        <input type="radio" name="bt1" value="1"/>
+        <input type="radio" name="bt1" value="2"/>
+        <input type="radio" name="bt1" value="3"/>
+        <!-- 같은 정보의 라디오 버튼의 이름은 같아야함 -->
+        <input type="radio" name="bt2" value="1"/>
+        <input type="radio" name="bt2" value="2"/>
+        <input type="radio" name="bt2" value="3"/>
+        <input type="checkbox" value="1" />
+        <input type="checkbox" value="2" />
+        <input type="checkbox" value="3" />
+
+        <select>
+            <option>사이트 이름</option>
+            <option>네이버</option>
+            <option>구글</option>
+            <option>페이스북</option>
+        </select>
+
+        <!-- cols 열갯수(글자수), rows 행갯수(줄수) -->
+        <textarea cols="20" rows="3">
+            ?
+        </textarea>
+
+        <!-- button 버튼 -->
+        <input type="button" value="버튼이름" />
+        <input type="button" onclick="alert('테스트완료')" value="테스트 버튼"/>
+
+        <!-- submit 제출 버튼 -->
+        <input type="submit" value="제출" />
+</form>
+
+
+</body>
 </html>
