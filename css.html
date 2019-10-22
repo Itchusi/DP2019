@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>css관련 코드</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="default.css" />
+        <!-- external 외부에서 css 파일을 불러와서 사용하기 -->
+        <style>
+            #embeded
+            {
+                color: green;
+                font-size: 30px;
+            }
+            /* 전제 선택자 */
+            *
+            {
+            
+            }
+            b
+            {
+                color: violet;
+            }
+            div
+            {
+                font-size: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="external">
+            external 방식
+        </div>
+        <div id="embeded">
+            embeded 방식
+        </div>
+        <div id="inline" style="color:yellow;">
+            inline 방식
+        </div>
+        <b>볼드체</b>
+        <style>
+            /* 클래스 선택자 */
+            .c_name
+            /* 아이디 선택자 */
+            {
+                color: green;
+            }
+            /* 아이디 선택자 */
+            #i_name
+            {
+                color: purple;
+            }
+        </style>
+        <!-- 클래스는 복수 지정 가능 -->
+        <div class="c_name">
+            클래스 선택자
+        </div>
+        <div class="c_name">
+            클래스 선택자
+        </div>
+        <!-- 아이디는 고유 정보로 복수로 작성을 피해야 함 -->
+        <div id="i_name">
+            아이디 선택자
+        </div>
+        <style>
+            /* 가상요소 선택자 */
+            #name_a:before
+            {
+                content: "시작";
+            }
+            #name_a::after
+            {
+                content: "끝";
+            }
+            #name_a::first-letter
+            {
+                font-size: 300px;
+            }
+            #name_a:first-line
+            {
+                color: pink;
+            }
+        </style>
+        <div id="name_a">
+            내용내용내용
+        </div>
+        <style>
+            .li1:first-child
+            {
+                /* 가상 클랙스 선택자 */
+                color: red;
+            }
+            .li1:last-child
+            {
+                color: blue;
+            }
+            .li1:nth-child(2)
+            {
+                color: green
+            }
+            /* 1st, 2st, 3st */
+            /* :link, :visited, :hover, :active, :focus */
+            a:link
+            {
+                color: black;
+                text-decoration: none;
+            }
+            a:visited
+            {
+                color: red;
+            }
+            a:hover
+            {
+                color: blue;
+                font-size: 20px;
+            }
+            a:active
+            {
+                color: yellow;
+            }
+            a:focus
+            {
+                color: green;
+            }
+        </style>
+        <ul><!-- parent -->
+            <li class="li1">리스트1</li> <!-- child -->
+            <li class="li1">리스트2</li>
+            <li class="li1">리스트3</li>
+            <li class="li1">리스트4</li>
+        </ul>
+        <a href="#">링크버튼</a>
+        <style>
+            /* 하위선택자 */
+            div li 
+            {
+                color: red;
+            }
+            /* 자식 선택자 */
+            div>ul>li
+            {
+                text-decoration: underline;
+            }
+            /* 선택자 그룹화 */
+            div{
+                color: red;
+            }
+            #i_1,#i_2,#i_3
+            {
+                color: purple;
+            }
+        </style>
+        <div>
+            <ul>
+                <li>리스트1</li>
+                <li>리스트2</li>
+                <li>리스트3</li>
+            </ul>
+        </div>
+        <div id="i_1">
+            첫번째
+        </div>
+        <div id="i_2">
+            두번째
+        </div>
+        <div id="i_3">
+            세번째
+        </div>
+        <style type="text/css">
+            .cascade {color:green;}
+            #specifi {color:blue;}
+        </style>
+        <div class="cascade"> 단계적으로 적용되는 스타일 </div>
+        <div class="cascade" id="specifi"> 단계적으로 적용되는 스타일 </div>
+        <div class="cascade" id="specifi" style="color:red;"> 단계적으로 적용되는 스타일 </div>
+        <style>
+             color_test
+             {
+                color: blue;
+                color: #000; /* #rgb, 0~f(16진수) */
+                color: #000000; /* #rrggbb, 0~f(16진수) */
+                color: rgb(o,o,255); /* 0~255 */
+                color: rgb(o,o,100%); /* 0~100% */
+
+             }
+        </style>
+        <div id="color_test">
+            color_test
+        </div>
+        <style>
+            #box_model,#inline_model{
+                border: solid 1px black;/*경계선 : 실선 1px두께 검은색;*/
+                width: 200px; /*가로*/
+                height: 200px; /*세로*/
+                /*margin 바깥 여백*/
+                margin: 100px;
+                /*padding 안쪽 여백*/
+                padding: 100px;
+                position: absolute; /*기본 static(정적인, 멈춘)*/
+                /*stactic 정적인, relative 관계형, absolute 절대적, fixed 고적형*/
+                left: 10px;
+                top: 10px;
+            }
+    
+            </style>
+            <div id="box_model">박스모델</div>
+            <span id="inline_model">인라인모델</span>
+        </body>
+</html>

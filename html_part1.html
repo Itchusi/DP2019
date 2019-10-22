@@ -1,46 +1,111 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <title>효정이의 친구들을 소개합니다</title>
-        <meta charset="utf-8" />
-    </head>
-    <body>
-            <br /> *이미지 클릭 시 개인 sns로 이동
-            <h1><방탈출메이트를 소개합니다></h1> 
-            <img src="" />
-            <h2>강민지(뽀야)</h2>
-            <h3>1999.04.21</h3>
-            <h4>네글자 소개 : 지각쟁이</h4>
-            <a href="https://www.instagram.com/i1krlur/?hl=ko" target="_blank"> 
-                <img width="400px" src="김태희.jpeg" /> </a>
-            <h2>김태희(복희)</h2>
-            <h3>2000.02.09</h3>
-            <h4>네글자 소개 : 게임중독</h4>
-            <img src="catcat.jpg" />
-            <h2>김하은(김미자)</h2>
-            <h3>2001.02.19</h3>
-            <h4>네글자 소개 : 김미자씨</h4>
-            <img src="catcat.jpg" />
-            <h2>배정현(깻잎)</h2>
-            <h3>2001.01.13</h3>
-            <h4>네글자 소개 : 진영엄마</h4>
-            <a href="" target="_blank"> 
-                <img width="400px" src="최수영.jpg" /> </a>
-            <h2>최수영(상추)</h2>
-            <h3>2000.09.11</h3>
-            <h4>네글자 소개 : 아차모씨</h4>
-            <hr />
-          
-            <ul> <이 사람들과 친해지는 법>
-                    <li>게임을 같이 한다</li>
-                    <li>야작을 같이 한다</li>
-                    <li>지각을 같이 한다</li>
-            </ul>
-     
-     <style>
-        table, tr, td {border:solid 1px black}
+<head>  
+    <style type="text/css" >
+    #wrapper {
+        width:500px;
+        margin : 0 auto ;
+        border:0px solid #000;
+    }
+    </style>
+
+<title>ELSWORD</title>
+
+<meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<style type="text/css">
+
+<!--
+	/* banner */
+	.banner {position: relative; width: 600px; height: 200px; top: 0px;  margin:0 auto; padding:0; overflow: hidden;}
+	.banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+	.banner ul li {float: left; width: 600px; height: 200px; margin:0; padding:0;}
+
+//-->
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script language="JavaScript">
+<!--
+	$(document).ready(function() {
+		//사용할 배너
+		var $banner = $(".banner").find("ul");
+
+		var $bannerWidth = $banner.children().outerWidth();//배너 이미지의 폭
+		var $bannerHeight = $banner.children().outerHeight(); // 높이
+		var $bannerLength = $banner.children().length;//배너 이미지의 갯수
+		var rollingId;
+
+		rollingId = setInterval(function() { rollingStart(); }, 3000);//다음 이미지로 롤링 애니메이션 할 시간차
+		banner.mouseover(function(){
+			//중지
+			clearInterval(rollingId);
+			$(this).css("cursor", "pointer");
+		});
+		//마우스 아웃되면 다시 시작
+		banner.mouseout(function(){
+			rollingId = setInterval(function() { rollingStart(); }, 3000);
+			$(this).css("cursor", "default");
+		});
+		
+		function rollingStart() {
+			$banner.css("width", $bannerWidth * $bannerLength + "px");
+			$banner.css("height", $bannerHeight + "px");
+			//alert(bannerHeight);
+			$banner.animate({left: - $bannerWidth + "px"}, 1500, function() { //숫자는 롤링 진행되는 시간이다.
+				$(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+				$(this).find("li:first").remove();
+				$(this).css("left", 0);
+			});
+		}
+	}); 
+//-->  
+</script>
+
+</head>
+<body>
+
+
+        <div id="wrapper">
+
+            <h1>NEXON</h1> 
+
+            <a href="http://elsword.nexon.com/events2019/1010/alter.aspx" target="_blank"> 
+                <img width="600px" src="300*100엘소드로고.jpg" /> </a>
+
+            <div style="text-align:right">
+
+            <form>
+                    <!-- text, radio, checkbox -->
+                    <input type="text" placeholder="아이디를 입력해주세요" value=""/>
+                    <input type="password" placeholder="암호를 입력해주세요" value=""/>
+            </form>
+            <tr>
+                <td><input type="button" onclick="alert('네트워크를 확인해주세요.')" value="로그인"/></td>
+            </tr>
+            <input type="button" value="회원가입" onClick="window.open('file:///Users/kohyojung/Documents/GitHub/DP2019/form.html')">
+
+            <div class="contents">
+
+	<div class="contents">
+
+		<div class="banner">
+			<ul>
+				<li><a href="http://elsword.nexon.com/events2019/1010/alter.aspx" target="_blank"> 
+                <img width="600px" src="300*100얼터배너.jpg" /> </a></li>
+				<li><a href="http://elsword.nexon.com/events2019/1010/new.aspx" target="_blank"> 
+                <img width="600px" src="300*100가열기배너.jpg" /> </a></li>
+				<li><a href="http://elsword.nexon.com/events2019/0911/donation.aspx" target="_blank"> 
+                <img width="600px" src="300*100나눔배너.jpg" /> </a></li>
+			</ul>
+		</div>
+	</div>
+
+    <style>
+        table, tr, td {border:solid 0px black}
     </style>
     <!-- summary 요약, cation 표제-->
+
     <style>
         table{
             border: 1px solid black;
@@ -49,59 +114,196 @@
             border: 1px solid black;
         }
     </style>
-    <table>
-            <thead>
-                    <tr>
-                        <th>이름</th>
-                        <th>나이</th>
-                        <th>별명</th>
-                        <th>성격</th>
-                        <th>취미</th>
-                    </tr>
-                </thead>
-    <!-- table, tr 한줄,td 한칸 -->
-    <caption>[표1] 효정이의 친구들</caption>
-    <tbody>
-        <tr>
-            <!-- colspan 가로 (열)늘이기, rowspan 세로(행)늘이기 -->
-             <td colspan="2"> 강민지 </td>
-             <td colspan="2"> 21세 </td>
-             <td colspan="2"> 엉덩이 </td>
-             <td colspan="2"> 명랑함 </td>
-             <td colspan="2"> 연애 </td>
-        </tr>
-        <tr>
-            <td colspan="2"> 김태희 </td>
-            <td colspan="2"> 20세 </td>
-            <td colspan="2"> 고복희 </td>
-            <td colspan="2"> 귀여움 </td>
-            <td colspan="2"> 게임 </td>
-       </tr>
-        <tr>
-             <td colspan="2"> 김하은 </td>
-             <td colspan="2"> 19세 </td>
-             <td colspan="2"> 김미자 </td>
-             <td colspan="2"> 쾌활함 </td>
-             <td colspan="2"> 교회 </td>
-        </tr>
-        <tr>
-            <td colspan="2"> 배정현 </td>
-            <td colspan="2"> 19세 </td>
-            <td colspan="2"> 함지박 </td>
-            <td colspan="2"> 사랑꾼 </td>
-            <td colspan="2"> 덕질 </td>
-       </tr>
-       <tr>
-            <td colspan="2"> 최수영 </td>
-            <td colspan="2"> 20세 </td>
-            <td colspan="2"> 양상츄 </td>
-            <td colspan="2"> 성실함 </td>
-            <td colspan="2"> 과제 </td>
-       </tr>
-    </tbody>
-</table>
+
+    <br />
+    <br />
+    <div style="text-align:center">
+    <hr />
+    </div>
+    <br />
+
+ <div style="text-align:center">
+    <h2>[캐릭터 소개]</h2>
+ </div>
+    <div style="text-align:left">
+        <h3>엘소드</h3>
+ <a href="http://elsword.nexon.com/gameinfo/character/elsword.aspx" target="_blank"> 
+    <img width="150px" height="150px" src="엘소드.jpg" /> </a> 
+    13세, 남자, 양손검     <br />
+    <h3>아이샤</h3>
+ <a href="http://elsword.nexon.com/gameinfo/character/aisha.aspx" target="_blank"> 
+        <img width="150px" height="150px" src="아이샤.jpg" /> </a>
+        15세, 여자, 지팡이     <br />
+        <h3>애드</h3>
+ <a href="http://elsword.nexon.com/gameinfo/character/add.aspx" target="_blank"> 
+            <img width="150px" height="150px" src="애드.jpg" /> </a>
+            16세, 남자, 나소드 다이너모     <br />
+            <h3>이브</h3>
+ <a href="http://elsword.nexon.com/gameinfo/character/eve.aspx" target="_blank"> 
+            <img width="150px" height="150px" src="이브.jpg" /> </a>
+            나이 미상, 여자, 나소드 기어     <br />
+            <h3>아인</h3>
+ <a href="http://elsword.nexon.com/gameinfo/character/ain.aspx" target="_blank"> 
+                <img width="150px" height="150px" src="아인.jpg" /> </a>
+                외관나이 21세, 남자, 펜듈럼    <br />
+        </div>
+
+        <div style="text-align:right">   <table>
+                <thead>
+                        <tr>
+                            <th>전직명</th>
+                            <th>    </th>
+                            <th>공격형</th>
+                            <th>    </th>
+                            <th>전직명</th>
+                            <th>    </th>
+                            <th>공격형</th>
+                        </tr>
+                    </thead>
+         <!-- table, tr 한줄,td 한칸 -->
+         <br />
+         <hr />
+         <br />
+    
+         <caption>[엘소드/아이샤 3차 전직 물마공표]</caption>
+         <tbody>
+            <tr>
+                <!-- colspan 가로 (열)늘이기, rowspan 세로(행)늘이기 -->
+                 <td colspan="2"> 나이트 엠퍼러 </td>
+                 <td colspan="2"> 물리공격 </td>
+                 <td colspan="2"> 에테르 세이지 </td>
+                 <td colspan="2"> 마법공격 </td>
+            </tr>
+            <tr>
+                <td colspan="2"> 룬 마스터 </td>
+                <td colspan="2"> 마법공격 </td>
+                <td colspan="2"> 오즈 소서러 </td>
+                <td colspan="2"> 마법공격 </td>
+           </tr>
+            <tr>
+                 <td colspan="2"> 임모탈 </td>
+                 <td colspan="2"> 물리공격 </td>
+                 <td colspan="2"> 메타모르피 </td>
+                 <td colspan="2"> 물리공격 </td>
+            </tr>
+         </tbody>
+    
+        </table>
+        <table>
+                <thead>
+                        <tr>
+                            <th>전직명</th>
+                            <th>    </th>
+                            <th>공격형</th>
+                            <th>    </th>
+                            <th>전직명</th>
+                            <th>    </th>
+                            <th>공격형</th>
+                        </tr>
+                    </thead>
+         <!-- table, tr 한줄,td 한칸 -->
+         <br />
+         <br />
+         
+         <caption>[애드/이브 3차 전직 물마공표]</caption>
+         <tbody>
+            <tr>
+                <!-- colspan 가로 (열)늘이기, rowspan 세로(행)늘이기 -->
+                 <td colspan="2"> 둠 브링어 </td>
+                 <td colspan="2"> 마법공격 </td>
+                 <td colspan="2"> 얼티메이트</td>
+                 <td colspan="2"> 마법공격 </td>
+            </tr>
+            <tr>
+                <td colspan="2"> 도미네이터 </td>
+                <td colspan="2"> 물리공격 </td>
+                <td colspan="2"> 에센시아 </td>
+                <td colspan="2"> 물리공격 </td>
+           </tr>
+            <tr>
+                 <td colspan="2"> 매드 패러독스 </td>
+                 <td colspan="2"> 마법공격 </td>
+                 <td colspan="2"> 사리엘 </td>
+                 <td colspan="2"> 마법공격 </td>
+            </tr>
+         </tbody>
+    
+        </table>
+        <table>
+                <thead>
+                        <tr>
+                            <th>전직명</th>
+                            <th>    </th>
+                            <th>공격형</th>
+                            <th>    </th>
+                            <th>전직명</th>
+                            <th>    </th>
+                            <th>공격형</th>
+                        </tr>
+                    </thead>
+         <!-- table, tr 한줄,td 한칸 -->
+         <br />
+         <br />
+         
+         <caption>[아인/라비 3차 전직 물마공표]</caption>
+         <tbody>
+            <tr>
+                <!-- colspan 가로 (열)늘이기, rowspan 세로(행)늘이기 -->
+                 <td colspan="2"> 리히터 </td>
+                 <td colspan="2"> 물리공격 </td>
+                 <td colspan="2"> 이터니티 위너 </td>
+                 <td colspan="2"> 물ㄹ리공격 </td>
+            </tr>
+            <tr>
+                <td colspan="2"> 블루헨 </td>
+                <td colspan="2"> 마법공격 </td>
+                <td colspan="2"> 라디언트 소울 </td>
+                <td colspan="2"> 마법공격 </td>
+           </tr>
+            <tr>
+                 <td colspan="2"> 헤르셔 </td>
+                 <td colspan="2"> 마법공격 </td>
+                 <td colspan="2"> 니샤 라비린스 </td>
+                 <td colspan="2"> 물리공격 </td>
+            </tr>
+         </tbody>
+    
+        </table>
+    </div>
+ 
+</div>
+<br />
+<hr />
+<div style="text-align:center">
+        <h2>[댓글쓰기]</h2>
+        게임에 대한 여러분의 의견을 공유해주세요!
+        <textarea cols="80" rows="10">
+                바르고 고운 말을 사용합시다.
+            </textarea>
+            <input type="button" onclick="alert('댓글을 작성할 수 없습니다')" value="댓글 작성"/>
+        </div>
+            
 <!-- div, span 분할 -->
-<div>내용</div>
-<span>내용</span>
-    </body>
+</div>
+<br />
+<hr />
+<div style="text-align:center">
+        <h2>[이번 프로젝트를 통해 느낀점]</h2>
+    </div>
+    <ol>
+            <li>태그 응용이 가능하다</li>
+            <br />
+            예를 들어 이미지를 넣는 태그를 알고 링크를 넣는 태그를 알면 두 개를 응용해서 이미지 속에 링크를 삽입하는 등
+            <br /> 내가 알고 있는 태그끼리의 응용이 가능하다는것에서 흥미를 느끼게 되었다.
+            <li>html에 대한 정보가 많다</li>
+            <br />
+            html에 대한 정보가 워낙 많고 자세히 설명되었는 자료들이 많았다.
+            <br />이용하다 막히는 부분이 있을 경우 인터넷을 통해 서치하고 원하는 정보를 얻기가 쉬웠다.
+            <li>기대감이 생겼다</li>
+            <br />
+            이번 프로젝트를 준비하면서 html에 대한 인식이 바뀌게 되었다.
+            <br /> 배우고자 하는 만큼 배울 수 있는 것 같다.
+            <br /> 다음 평가때는 훨씬 더 자연스럽고 정돈이 잘 된 웹사이트를 구현하고싶다.
+       </ol>
+</body>
 </html>

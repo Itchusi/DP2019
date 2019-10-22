@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+    <style type="text/css" >
+    #wrapper {
+        width:500px;
+        margin : 0 auto ;
+        border:0px solid #000;
+    }
+    </style>
+
+<title>ELSWORD</title>
+
+<meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<style type="text/css">
+<!--
+	/* banner */
+	.banner {position: relative; width: 600px; height: 200px; top: 50px;  margin:0 auto; padding:0; overflow: hidden;}
+	.banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+	.banner ul li {float: left; width: 600px; height: 200px; margin:0; padding:0;}
+
+//-->
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script language="JavaScript">
+<!--
+	$(document).ready(function() {
+		//사용할 배너
+		var $banner = $(".banner").find("ul");
+
+		var $bannerWidth = $banner.children().outerWidth();//배너 이미지의 폭
+		var $bannerHeight = $banner.children().outerHeight(); // 높이
+		var $bannerLength = $banner.children().length;//배너 이미지의 갯수
+		var rollingId;
+
+		rollingId = setInterval(function() { rollingStart(); }, 3000);//다음 이미지로 롤링 애니메이션 할 시간차
+		banner.mouseover(function(){
+			//중지
+			clearInterval(rollingId);
+			$(this).css("cursor", "pointer");
+		});
+		//마우스 아웃되면 다시 시작
+		banner.mouseout(function(){
+			rollingId = setInterval(function() { rollingStart(); }, 3000);
+			$(this).css("cursor", "default");
+		});
+		
+		function rollingStart() {
+			$banner.css("width", $bannerWidth * $bannerLength + "px");
+			$banner.css("height", $bannerHeight + "px");
+			//alert(bannerHeight);
+			$banner.animate({left: - $bannerWidth + "px"}, 1500, function() { //숫자는 롤링 진행되는 시간이다.
+				$(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+				$(this).find("li:first").remove();
+				$(this).css("left", 0);
+			});
+		}
+	}); 
+//-->  
+</script>
+
+</head>
+<body>
+
+
+        <div id="wrapper">
+            <h1>NEXON</h1> 
+            <a href="http://elsword.nexon.com/events2019/1010/alter.aspx" target="_blank"> 
+                <img width="600px" src="300*100엘소드로고.jpg" /> </a>
+
+            <div style="text-align:right">
+
+            <form>
+                    <!-- text, radio, checkbox -->
+                    <input type="text" placeholder="아이디를 입력해주세요" value=""/>
+                    <input type="password" placeholder="암호를 입력해주세요" value=""/>
+            </form>
+            <tr>
+                <td><input type="reset" name="reset" value="로그인" /></td>
+            </tr>
+            <input type="button" value="회원가입" onClick="window.open('file:///Users/kohyojung/Documents/GitHub/DP2019/form.html')">
+
+            <div class="contents">
+
+	<div class="contents">
+
+		<div class="banner">
+			<ul>
+				<li><img src="300*100얼터배너.jpg" width="600px" height="200px"></li>
+				<li><img src="300*100가열기배너.jpg" width="600px" height="200px"></li>
+				<li><img src="300*100나눔배너.jpg" width="600px" height="200px"></li>
+			</ul>
+		</div>
+	</div>
+
+    <style>
+        table, tr, td {border:solid 1px black}
+    </style>
+    <!-- summary 요약, cation 표제-->
+    <style>
+        table{
+            border: 1px solid black;
+        }
+        td{
+            border: 1px solid black;
+        }
+    </style>
+
+
+
+    <table>
+            <thead>
+                    <tr>
+                        <th>전직명</th>
+                        <th>    </th>
+                        <th>공격형</th>
+                        <th>    </th>
+                        <th>전직명</th>
+                        <th>    </th>
+                        <th>공격형</th>
+                    </tr>
+                </thead>
+    <!-- table, tr 한줄,td 한칸 -->
+    <caption>[엘소드/아이샤 3차 전직 물마공표]</caption>
+    <tbody>
+        <tr>
+            <!-- colspan 가로 (열)늘이기, rowspan 세로(행)늘이기 -->
+             <td colspan="2"> 나이트 엠퍼러 </td>
+             <td colspan="2"> 물리공격 </td>
+             <td colspan="2"> 에테르 세이지 </td>
+             <td colspan="2"> 마법공격 </td>
+        </tr>
+        <tr>
+            <td colspan="2"> 룬 마스터 </td>
+            <td colspan="2"> 마법공격 </td>
+            <td colspan="2"> 오즈 소서러 </td>
+            <td colspan="2"> 마법공격 </td>
+       </tr>
+        <tr>
+             <td colspan="2"> 임모탈 </td>
+             <td colspan="2"> 물리공격 </td>
+             <td colspan="2"> 메타모르피 </td>
+             <td colspan="2"> 물리공격 </td>
+        </tr>
+    </tbody>
+</table>
+<!-- div, span 분할 -->
+</div>
+
+</body>
+</html>
